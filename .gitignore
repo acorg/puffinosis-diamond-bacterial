@@ -1,0 +1,8 @@
+logs
+slurm-pipeline.done
+status.json
+02-map/*-unmapped.fastq.gz
+03-diamond/*.json.bz2
+04-panel/out
+04-panel/summary-proteins
+04-panel/summary-virus

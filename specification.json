@@ -1,0 +1,29 @@
+{
+    "steps": [
+        {
+            "cwd": "00-start",
+            "name": "start",
+            "script": "00-start/start.sh"
+        },
+        {
+            "cwd": "03-diamond",
+            "dependencies": ["start"],
+            "name": "diamond",
+            "script": "03-diamond/sbatch.sh"
+        },
+        {
+            "collect": true,
+            "cwd": "04-panel",
+            "dependencies": ["diamond"],
+            "name": "panel",
+            "script": "04-panel/sbatch.sh"
+        },
+        {
+            "collect": true,
+            "cwd": "06-stop",
+            "dependencies": ["panel"],
+            "name": "stop",
+            "script": "06-stop/sbatch.sh"
+        }
+    ]
+}
